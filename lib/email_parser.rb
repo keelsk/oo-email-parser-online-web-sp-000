@@ -3,6 +3,7 @@
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
 
+require = 'pry'
 
 class EmailAddressParser
   def initialize(email_list)
@@ -12,6 +13,7 @@ class EmailAddressParser
   def parse
     if @email_list.include?(",")
       email_array = @email_list.split(/,\s?/)
+      binding.pry
     else
       email_array = @email_list.split(" ")
     end
