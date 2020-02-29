@@ -13,9 +13,9 @@ class EmailAddressParser
   def parse
     if @email_list.include?(",")
       email_array = @email_list.split(/,\s?/)
-      binding.pry
     else
       email_array = @email_list.split(" ")
     end
   end
+  binding.pry
 end
